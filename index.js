@@ -9,6 +9,10 @@ let server = app.listen(8000, () => {
     console.log("Server is running http://%s:%s", host, port)
 })
 
+app.get("/", (req, res) => {
+    res.send("<h1> Hello</h1>")
+})
+
 //GET request: /hello return "Hello Express JS"
 app.get("/hello", (req, res) => {
     res.send("<h1> Hello Express Js </h1>")
